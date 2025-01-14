@@ -1,0 +1,38 @@
+.menu {
+    position: fixed;
+    bottom: 1rem; /* Positionne le menu en bas */
+    left: 50%; /* Centre horizontalement le menu */
+    transform: translateX(-50%); /* Ajuste la position au centre */
+    background-color: #ffffff; /* Fond blanc */
+    border: solid 2px rgba(42, 145, 200, 0.747);
+    box-shadow: 0px 6px 14px rgba(42, 145, 200, 0.747); /* Ombre vers le bas */
+    padding: 20px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border-radius: 1rem; /* Ajoute des coins arrondis */
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Dispose les éléments en ligne */
+    gap: 3rem; /* Espace entre les éléments */
+  }
+  
+  .menu li {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s;
+    text-align: center;
+    font-weight:370;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu li:hover {
+    transform: scale(1.07);
+    color: #2d4b6be9;
+  }
+  
+ 

@@ -43,6 +43,21 @@
     font-weight: 500;
     line-height: 100%;
     letter-spacing: -0.125rem;
+    text-align: center;
+    margin-left: 20rem;
+    margin-bottom: 1rem;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--gray-900);
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    text-align: center;
     margin: 0;
     font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -59,29 +74,50 @@
     min-height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 1rem;
     box-sizing: inherit;
-    position: relative;
+    position: fixed;
   }
 
-  
+
   .content {
+    overflow-y: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    max-width: 700px;
+    max-width: 80%;
     margin-bottom: 3rem;
+
   }
 
-  .content h1 {
+  .title{
+    display: flex;
+    flex-direction: row;
     margin-top: 1.75rem;
+    align-items: center;
+
+
   }
+ 
+  .subtitle{
+    margin-top:1rem;
+  }
+
+
 
   .content p {
     margin-top: 1.5rem;
   }
 
+  .collab_img{
+  align-items: center;
+  width: auto;   /* Définir la largeur de l'image */
+  height: 120px;   /* La hauteur s'ajustera automatiquement pour garder les proportions */
+  display: block; /* Pour que l'image soit affichée comme un bloc et prenne toute la largeur disponible */
+  margin: 1rem 4rem;
+  }
   
 
   @media screen and (max-width: 650px) {
@@ -101,10 +137,15 @@
 
 <main class="main">
   <div class="content">
-    <div class="left-side">
+    <div class="title">
       <h1>{{ title }}</h1>
+      <img src="assets/images/bar_x_pol.png" alt="collab" class="collab_img"/>
     </div>
-    
+    <div class="subtitle">
+      <h2>Conseil et mise en place d'un assistant IA de recherche, synthèse et comparaison de documents sur le serveur local de l'entreprise. </h2>
+    </div>
+    <app-presentation-etudiants></app-presentation-etudiants>
+    <app-menu></app-menu>
     
   </div>
 </main>

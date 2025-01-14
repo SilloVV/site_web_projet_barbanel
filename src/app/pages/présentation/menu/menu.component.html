@@ -1,0 +1,10 @@
+<nav class="menu">
+    <ul>
+      <li *ngFor="let section of sections" (click)="navigateTo(section.id)">
+        {{ section.name }}
+      </li>
+    </ul>
+  </nav>
+  
+ 
+  
