@@ -29,13 +29,14 @@ export class MenuComponent {
       name: 'Spécifications techniques',
     },
     {
-      id: 'paths',
+      id: 'pistes',
       name: 'Pistes suivies',
     },
     {
       id: 'solutions',
       name: 'Solutions proposées',
     },
+
   ];
 
   navigateTo(sectionId: string): void {

@@ -134,21 +134,21 @@
     }
   }
 </style>
-
 <main class="main">
   <div class="content">
-    <div class="title">
+    <div class="title" *ngIf="showHeader">
       <h1>{{ title }}</h1>
       <img src="assets/images/bar_x_pol.png" alt="collab" class="collab_img"/>
     </div>
-    <div class="subtitle">
-      <h2>Conseil et mise en place d'un assistant IA de recherche, synthèse et comparaison de documents sur le serveur local de l'entreprise. </h2>
+    <div class="subtitle" *ngIf="showHeader">
+      <h2>Conseil et mise en place d'un assistant IA de recherche, synthèse et comparaison de documents sur le serveur local de l'entreprise.</h2>
     </div>
-    <app-presentation-etudiants></app-presentation-etudiants>
     <app-menu></app-menu>
-    
+    <router-outlet></router-outlet>
   </div>
 </main>
+
+
 
 
 
