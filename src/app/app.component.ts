@@ -116,7 +116,7 @@ export class AppComponent {
         this.router.navigate(['/company']);
         break;
       case '/pistes':
-        this.router.navigate(['/company']);
+        this.router.navigate(['/specifications']);
         break;
       case '/solutions':
         this.router.navigate(['/pistes']);
