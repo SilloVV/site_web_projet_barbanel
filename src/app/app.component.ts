@@ -103,6 +103,7 @@ export class AppComponent {
     const currentRoute = this.router.url;
     switch (currentRoute) {
       case '/first':
+        this.router.navigate(['/solutions'])
         // Optionnel : on peut ne rien faire si on est déjà sur la première section
         break;
       case '/project':
