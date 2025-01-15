@@ -1,6 +1,9 @@
 <nav class="menu">
     <ul>
-      <li *ngFor="let section of sections" (click)="navigateTo(section.id)">
+      <li *ngFor="let section of sections; let i = index"  
+        (click)="navigateTo(section.id); onSectionClick(i)"
+        [class.active]="i === activeIndex" 
+        (click)="navigateTo(section.id)">
         {{ section.name }}
       </li>
     </ul>

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-menu',
@@ -42,4 +43,32 @@ export class MenuComponent {
   navigateTo(sectionId: string): void {
     this.router.navigate([sectionId]);
   }
+
+
+   // Variable pour suivre l'index de la section active
+  activeIndex: number = 0; 
+
+   
+  // Détecte quand une touche est enfoncée (flèches gauche/droite)
+  @HostListener('document:keydown', ['$event'])
+  onKeydown(event: KeyboardEvent): void {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      this.changeActiveSection(event.key);
+    }
+  }
+
+  // Change la section active en fonction de la touche pressée
+  private changeActiveSection(key: string): void {
+    if (key === 'ArrowRight') {
+      this.activeIndex = (this.activeIndex + 1) % this.sections.length;  // Passage à la section suivante
+    } else if (key === 'ArrowLeft') {
+      this.activeIndex = (this.activeIndex - 1 + this.sections.length) % this.sections.length;  // Retour à la section précédente
+    }
+  }
+
+  onSectionClick(index: number): void {
+    this.activeIndex = index;
+  }
+
+  
 }
